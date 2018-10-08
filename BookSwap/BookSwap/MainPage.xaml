@@ -1,14 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BookSwap"
              x:Class="BookSwap.MainPage">
-
+             
     <StackLayout>
         <!-- Place new controls here -->
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Entry x:Name="Username" Placeholder="Username" Text="" IsTextPredictionEnabled="false"/>
+        <Entry x:Name="Password" Placeholder="Password" Text="" IsPassword="true"/>
+        <Button x:Name="LoginButton" Text="Login" BackgroundColor="Gray" BorderColor="Blue" BorderWidth=".25" BorderRadius="3"/>
     </StackLayout>
 
 </ContentPage>
