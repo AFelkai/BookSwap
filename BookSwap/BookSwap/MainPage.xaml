@@ -4,14 +4,29 @@
              xmlns:local="clr-namespace:BookSwap"
              x:Class="BookSwap.MainPage">
              
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Entry x:Name="Username" Placeholder="Username" Text="" IsTextPredictionEnabled="false"/>
-        <Entry x:Name="Password" Placeholder="Password" Text="" IsPassword="true"/>
-        <Button x:Name="LoginButton" Text="Login" BackgroundColor="Gray" BorderColor="Blue" BorderWidth=".25" BorderRadius="3"/>
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 260" />
+            <On Platform="Android" Value="20, 40, 20, 260" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout x:Name="MainLayout">
+        <StackLayout x:Name="appIcon" VerticalOptions="Center">
+        <Image Source = "https://s3-us-west-1.amazonaws.com/comp-490-bookswap/Icon-App-76x76@3x.png" Aspect="AspectFit"/>           
+        </StackLayout>
+            <StackLayout x:Name="entryFields" VerticalOptions="EndAndExpand">
+                <Entry x:Name="entryUsername" Placeholder="Username" IsTextPredictionEnabled="false" IsSpellCheckEnabled="false"/>
+                <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true" IsTextPredictionEnabled="false"/>
+                <Button x:Name ="buttonLogin" Text="Login" Clicked="Handle_Clicked" HeightRequest="34" 
+                        BorderWidth=".25" BorderRadius="4" BorderColor="Blue"/>
+                <StackLayout x:Name="rememberMeForgotPassword" Spacing="130" Orientation="Horizontal" HorizontalOptions="Start">
+                    <Label x:Name="labelRememberMe"></Label>
+                    <Label x:Name="labelForgotPassword" Text="Forgot Password"></Label>
+                </StackLayout>
+             <Switch x:Name="switchRememberMe" HorizontalOptions="Start"/>  
+            </StackLayout>    
     </StackLayout>
-
+    <!--<StackLayout VerticalOptions="End">
+        <Label x:Name="labelCopyright" Text="Book Swap © 2018 All rights Reserved" VerticalOptions="End" HorizontalOptions="Center" FontSize="8"></Label>
+    </StackLayout>-->
 </ContentPage>
