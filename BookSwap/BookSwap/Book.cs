@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TestApp
+namespace BookSwap
 {
     public class Book
     {   

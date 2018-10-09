@@ -5,13 +5,12 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace TestApp
+namespace BookSwap
 {
     public static class ISBNRequest
     {
         public static Book GetRequest(string ISBN)
         {
-
             string content = "";
             const string WEBSERVICE_URL = "https://api.isbndb.com/book/";
 
