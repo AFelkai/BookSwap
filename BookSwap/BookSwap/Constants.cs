@@ -15,19 +15,7 @@ namespace BookSwap
 
         public static class AWSS3
         {
-            public static string secretAccessKey = "mBSWDI+zBrIWqBnrEDBYWCqw5wvhjcHUwA3iqfwJ";
-            public static string accessKeyID = "AKIAJ4PX3FK2EXC22DKQ";
             public static string bucketName = "comp-490-bookswap";
-
-            public static string getSecretAccessKey(){
-               return "bqHgK9rr6yfhN63n8q89G51UyF88+3JYw5UX1Be5";
-            }
-
-            public static string getAccessKeyID()
-            {
-               return "AKIAISEAFCLUT2GWIFTA";
-            }
-
       }
         public static class Strings
         {
