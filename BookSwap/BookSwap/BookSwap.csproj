@@ -10,13 +10,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.871581" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.24.3" />
-    <PackageReference Include="AWSSDK.Core" Version="3.3.27" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.24.4" />
+    <PackageReference Include="AWSSDK.Core" Version="3.3.27.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.12" />
+    <PackageReference Include="MySql.Data.Entity" Version="6.10.8" />
+    <PackageReference Include="ZXing.Net" Version="0.16.4" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Resources\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="TestNavigation.cs" />
+    <Compile Remove="Home.xaml.cs" />
+    <Compile Remove="TestNavigation.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Home.xaml" />
   </ItemGroup>
 </Project>

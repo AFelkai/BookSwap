@@ -33,9 +33,7 @@ namespace BookSwap
             }
             catch (Exception ex)
             {
-
-                Console.WriteLine(ex);
-
+               Console.WriteLine(ex);
             }
             return JsonConvert.DeserializeObject<BookWrapper>(content).book;
         }

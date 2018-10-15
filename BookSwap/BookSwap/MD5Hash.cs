@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Security.Cryptography;
 
-namespace TestApp
+namespace BookSwap
 {
     public static class MD5Hash
     {
@@ -19,6 +19,7 @@ namespace TestApp
             {
                 stringBuilder.Append(hashBytes[i].ToString("X2"));
             }
+
             return stringBuilder.ToString();
         }
     }

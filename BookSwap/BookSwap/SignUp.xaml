@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BookSwap.SignUp"
+             Title="Create Account">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="20, 40, 20, 260"/>
+        <On Platform="Android" Value="20"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+     
+    <ContentPage.Content>
+        <StackLayout x:Name="MainLayout">
+            <Entry x:Name="entryName" Placeholder="Name" ReturnType="Next" MaxLength="12" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"/>
+            <Entry x:Name="entryEmail" Placeholder="Email" ReturnType="Done" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"/>
+            <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true"/>    
+            <Entry x:Name="entryConfirmPassword" Placeholder="Confirm Password" IsPassword="true"/>
+            <Button x:Name="btnSubmit" Text="Create Account"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

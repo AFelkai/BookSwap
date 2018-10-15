@@ -2,12 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BookSwap"
-             x:Class="BookSwap.MainPage">
-             
+             x:Class="BookSwap.MainPage">      
      <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="20, 40, 20, 260" />
-            <On Platform="Android" Value="20, 40, 20, 260" />
+            <On Platform="iOS" Value="20, 0, 20, 0" />
+            <On Platform="Android" Value="20" />
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout x:Name="MainLayout">
@@ -17,13 +16,15 @@
             <StackLayout x:Name="entryFields" VerticalOptions="EndAndExpand">
                 <Entry x:Name="entryUsername" Placeholder="Username" IsTextPredictionEnabled="false" IsSpellCheckEnabled="false"/>
                 <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true" IsTextPredictionEnabled="false"/>
-                <Button x:Name ="buttonLogin" Text="Login" Clicked="Handle_Clicked" HeightRequest="34" 
+                <Button x:Name ="buttonLogin" Text="Login" HeightRequest="44" 
                         BorderWidth=".25" BorderRadius="4" BorderColor="Blue"/>
                 <StackLayout x:Name="rememberMeForgotPassword" Spacing="130" Orientation="Horizontal" HorizontalOptions="Start">
-                    <Label x:Name="labelRememberMe"></Label>
-                    <Label x:Name="labelForgotPassword" Text="Forgot Password"></Label>
+                    <Label x:Name="labelRememberMe"/>
+                    <Label x:Name="labelForgotPassword" Text="Forgot Password"/>
                 </StackLayout>
-             <Switch x:Name="switchRememberMe" HorizontalOptions="Start"/>  
+             <Switch x:Name="switchRememberMe" HorizontalOptions="Start"></Switch> 
+                </StackLayout>
+        <StackLayout x:Name="Spacer" Margin="200">
             </StackLayout>    
     </StackLayout>
     <!--<StackLayout VerticalOptions="End">
