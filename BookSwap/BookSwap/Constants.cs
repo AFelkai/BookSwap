@@ -20,6 +20,7 @@ namespace BookSwap
         public static class Strings
         {
             public static string example = "haveTwoTwinkiesAndCallMeInTheMorning";
+            public static string mainPageMessage = "The best place to find or sell second hand text books";
         }
 
         public static class FontSizes

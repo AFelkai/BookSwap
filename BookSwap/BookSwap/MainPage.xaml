@@ -1,33 +1,57 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:BookSwap"
-             x:Class="BookSwap.MainPage">      
-     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="20, 0, 20, 0" />
-            <On Platform="Android" Value="20" />
-        </OnPlatform>
-    </ContentPage.Padding>
-    <StackLayout x:Name="MainLayout">
-        <StackLayout x:Name="appIcon" VerticalOptions="Center">
-        <Image Source = "https://s3-us-west-1.amazonaws.com/comp-490-bookswap/Icon-App-76x76@3x.png" Aspect="AspectFit"/>           
-        </StackLayout>
-            <StackLayout x:Name="entryFields" VerticalOptions="EndAndExpand">
-                <Entry x:Name="entryUsername" Placeholder="Username" IsTextPredictionEnabled="false" IsSpellCheckEnabled="false"/>
-                <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true" IsTextPredictionEnabled="false"/>
-                <Button x:Name ="buttonLogin" Text="Login" HeightRequest="44" 
-                        BorderWidth=".25" BorderRadius="4" BorderColor="Blue"/>
-                <StackLayout x:Name="rememberMeForgotPassword" Spacing="130" Orientation="Horizontal" HorizontalOptions="Start">
-                    <Label x:Name="labelRememberMe"/>
-                    <Label x:Name="labelForgotPassword" Text="Forgot Password"/>
-                </StackLayout>
-             <Switch x:Name="switchRememberMe" HorizontalOptions="Start"></Switch> 
-                </StackLayout>
-        <StackLayout x:Name="Spacer" Margin="200">
-            </StackLayout>    
-    </StackLayout>
-    <!--<StackLayout VerticalOptions="End">
-        <Label x:Name="labelCopyright" Text="Book Swap © 2018 All rights Reserved" VerticalOptions="End" HorizontalOptions="Center" FontSize="8"></Label>
-    </StackLayout>-->
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BookSwap.MainPage">
+    
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>        
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+    
+        <BoxView Color="Transparent" Grid.Row="0"/>
+          
+            <Image Grid.Row="0" 
+            Source="stack_of_books.jpg"
+            HorizontalOptions="Center"
+            Aspect="AspectFill"/>
+            
+            <Frame BackgroundColor="Black"
+                   Opacity=".595"
+                   CornerRadius="0"/>
+        
+            <Label x:Name="labelMessage" 
+               FontSize="Medium"
+               LineHeight="1.125"
+               VerticalOptions="Start"
+               Opacity=".65"
+               Margin="30,60"/>
+        
+            <Image Source="logo.png"
+                   Scale=".25"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"
+                   TranslationX="-110"
+                   TranslationY="5"/>
+        
+        <Grid Grid.Row="1" ColumnSpacing="0">
+            
+            <Button Grid.Column="0"
+                    x:Name="btnSignUp"
+                    Text="Sign Up"
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="0"
+            />
+            
+            <Button Grid.Column="1"
+                    x:Name="btnLogin"
+                    Text="Login"
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="0"
+            />
+        </Grid>
+    </Grid>
+   
+    <ContentPage.Content>
+     </ContentPage.Content>
 </ContentPage>

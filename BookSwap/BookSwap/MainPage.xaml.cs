@@ -1,53 +1,35 @@
 ﻿using Xamarin.Forms;
-using System;
-
 
 namespace BookSwap
 {
-  public partial class MainPage : ContentPage
-  {
+   public partial class MainPage : ContentPage
+   {
       public MainPage()
       {
          InitializeComponent();
          Init();
-         buttonLogin.Clicked += async (sender, args) => await Navigation.PushAsync(new SignUp());
+
+         btnLogin.Clicked += async (sender, args) => await Navigation.PushModalAsync( new Login() );
+         btnSignUp.Clicked += async (sender, e) => await Navigation.PushAsync( new SignUp() );
       }
 
-        public void Init()
-        {
+      public void Init()
+      {
+         NavigationPage.SetHasNavigationBar(this, false);
 
-            appIcon.Margin = 44;
+         btnLogin.BackgroundColor = Constants.Colors.primaryFont;
+         btnLogin.TextColor = Color.White;
+         btnLogin.FontAttributes = FontAttributes.Bold;
+         btnLogin.HeightRequest = 60;
 
-            //BackgroundColor = Color.FromHex("4A4A4A");
-            entryUsername.HeightRequest = 44;
-            //entryUsername.FontSize = Constants.FontSizes.placeholderSize;
-            entryUsername.BackgroundColor = Constants.Colors.entryFieldBackground;
+         btnSignUp.BackgroundColor = Color.Gray;
+         btnSignUp.TextColor = Color.DarkGray;
+         btnSignUp.FontAttributes = FontAttributes.Bold;
+         btnSignUp.HeightRequest = 60;
 
-            entryPassword.HeightRequest = 44;
-            //entryPassword.FontSize = Constants.FontSizes.placeholderSize;
-            entryPassword.BackgroundColor = Constants.Colors.entryFieldBackground;
-
-            labelForgotPassword.FontSize = Constants.FontSizes.subHeaderSize;
-            labelForgotPassword.Text = "Forgot Password";
-            labelForgotPassword.TextColor = Color.Gray;
-
-            labelRememberMe.FontSize = Constants.FontSizes.subHeaderSize;
-            labelRememberMe.Text = "Remember me";
-            labelRememberMe.TextColor = Color.Gray;
-
-            switchRememberMe.OnColor = Constants.Colors.primaryFont;
-            //switchRememberMe.IsEnabled = true;
-
-            //buttonLogin.FontSize = Constants.FontSizes.placeholderSize;
-            buttonLogin.BackgroundColor = Color.Transparent;
-            buttonLogin.BorderColor = Constants.Colors.primaryFont;
-            buttonLogin.TextColor = Constants.Colors.primaryFont;
-            //buttonLogin.IsEnabled = true;
-        }
-
-        //async void Handle_Clicked(object sender, System.EventArgs e)
-        //{
-        //    await Navigation.PushAsync( new SignUp());
-        //}
-    }
+         labelMessage.Text = Constants.Strings.mainPageMessage;
+         labelMessage.FontAttributes = FontAttributes.Bold;
+         labelMessage.TextColor = Color.WhiteSmoke;
+      }
+   }
 }

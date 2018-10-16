@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BookSwap"
+             x:Class="BookSwap.Login">      
+     <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 0, 20, 0" />
+            <On Platform="Android" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <StackLayout x:Name="MainLayout">
+        
+        <Button x:Name="btnClose"
+                Image="icon-close.png"
+                HorizontalOptions="Start"
+                Scale=".15"
+                Margin="-60,-30"/>
+        
+        <Image Source = "logo.png" 
+               HeightRequest="160"
+               WidthRequest="160"
+               VerticalOptions="Start"
+               Aspect="AspectFit"
+               Scale=".35"/> 
+        
+       <!-- <StackLayout x:Name="appIcon" VerticalOptions="Start">
+                  
+        </StackLayout>-->
+            <StackLayout x:Name="entryFields" VerticalOptions="Start">
+                <Entry x:Name="entryUsername" Placeholder="Username" IsTextPredictionEnabled="false" IsSpellCheckEnabled="false"/>
+                <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true" IsTextPredictionEnabled="false"/>
+                <Button x:Name ="buttonLogin" Text="Login" HeightRequest="44" 
+                        BorderWidth=".25" BorderRadius="4" BorderColor="Blue"/>
+               <!-- <StackLayout x:Name="rememberMeForgotPassword" Spacing="130" Orientation="Horizontal" HorizontalOptions="Start">
+                    
+                </StackLayout>-->
+             <Switch x:Name="switchRememberMe" HorizontalOptions="Start"></Switch> 
+                </StackLayout>
+        <StackLayout x:Name="Spacer" Margin="200">
+            </StackLayout>    
+          <Grid HeightRequest="44">
+                <Label x:Name="labelRememberMe" 
+                       HorizontalOptions="StartAndExpand"/>
+                <Label x:Name="labelForgotPassword" 
+                       Text="Forgot Password" 
+                       HorizontalTextAlignment="End"/>    
+           </Grid>
+    </StackLayout>
+    <!--<StackLayout VerticalOptions="End">
+        <Label x:Name="labelCopyright" Text="Book Swap © 2018 All rights Reserved" VerticalOptions="End" HorizontalOptions="Center" FontSize="8"></Label>
+    </StackLayout>-->
+</ContentPage>

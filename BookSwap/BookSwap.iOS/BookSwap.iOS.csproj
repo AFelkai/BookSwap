@@ -168,7 +168,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Launch.png" />
     <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\stack_of_books.jpg" />
+    <BundleResource Include="Resources\icon-barcode.png" />
+    <BundleResource Include="Resources\icon-close.png" />
   </ItemGroup>
 </Project>
