@@ -15,7 +15,6 @@
     <PackageReference Include="AWSSDK.S3" Version="3.3.24.4" />
     <PackageReference Include="AWSSDK.Core" Version="3.3.27.1" />
     <PackageReference Include="MySql.Data" Version="8.0.12" />
-    <PackageReference Include="MySql.Data.Entity" Version="6.10.8" />
     <PackageReference Include="ZXing.Net" Version="0.16.4" />
     <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
   </ItemGroup>
