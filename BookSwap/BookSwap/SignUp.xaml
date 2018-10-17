@@ -3,20 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="BookSwap.SignUp"
              Title="Create Account">
-    <ContentPage.Padding>
+    <!--<ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
         <On Platform="iOS" Value="20, 40, 20, 260"/>
         <On Platform="Android" Value="20"/>
         </OnPlatform>
-    </ContentPage.Padding>
-     
-    <ContentPage.Content>
-        <StackLayout x:Name="MainLayout">
-            <Entry x:Name="entryName" Placeholder="Name" ReturnType="Next" MaxLength="12" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"/>
-            <Entry x:Name="entryEmail" Placeholder="Email" ReturnType="Done" IsSpellCheckEnabled="false" IsTextPredictionEnabled="false"/>
-            <Entry x:Name="entryPassword" Placeholder="Password" IsPassword="true"/>    
-            <Entry x:Name="entryConfirmPassword" Placeholder="Confirm Password" IsPassword="true"/>
+    </ContentPage.Padding>-->
+    
+    <Grid>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="*"/>                
+            </Grid.RowDefinitions>
+            
+            <Button x:Name="btnClose"
+                    Grid.Row="0"
+                    VerticalOptions="Start"
+                    Image="icon-close.png"
+                    HorizontalOptions="Start"
+                    Scale=".15"
+                    Margin="-40,-30"/>
+                        
+            <StackLayout x:Name="MainLayout" Grid.Row="1" Margin="20">
+            
+            <Entry x:Name="entryName" 
+                   Placeholder="Name" 
+                   ReturnType="Next" 
+                   MaxLength="12" 
+                   IsSpellCheckEnabled="false" 
+                   IsTextPredictionEnabled="false"/>
+            
+            <Entry x:Name="entryEmail" 
+                   Placeholder="Email" 
+                   ReturnType="Done" 
+                   IsSpellCheckEnabled="false" 
+                   IsTextPredictionEnabled="false"/>
+            
+            <Entry x:Name="entryPassword" 
+                   Placeholder="Password" 
+                   IsPassword="true"/>
+            
+            <Entry x:Name="entryConfirmPassword" 
+                   Placeholder="Confirm Password" 
+                   IsPassword="true"/>
+            
             <Button x:Name="btnSubmit" Text="Create Account"/>
+            
         </StackLayout>
+            
+        </Grid>    
+    </Grid>
+    
+    
+    <ContentPage.Content>
+        
     </ContentPage.Content>
 </ContentPage>

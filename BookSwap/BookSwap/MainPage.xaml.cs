@@ -10,7 +10,7 @@ namespace BookSwap
          Init();
 
          btnLogin.Clicked += async (sender, args) => await Navigation.PushModalAsync( new Login() );
-         btnSignUp.Clicked += async (sender, e) => await Navigation.PushAsync( new SignUp() );
+         btnSignUp.Clicked += async (sender, e) => await Navigation.PushModalAsync( new SignUp() );
       }
 
       public void Init()

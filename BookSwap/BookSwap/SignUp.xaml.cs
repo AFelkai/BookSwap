@@ -12,18 +12,13 @@ namespace BookSwap
          InitializeComponent();
          init();
 
-         //btnSubmit.Clicked += async (sender, args) => await Navigation.PushAsync( new Home() );
+         btnClose.Clicked += async (sender, e) => await Navigation.PopModalAsync();
       }
-
-      //void BtnSubmit_Clicked(object sender, EventArgs e)
-      //{
-      //   await new TabbedPage(new Home());
-      //}
-
 
       public void init()
       {
-         
+
+         NavigationPage.SetHasNavigationBar(this, false);
          entryName.HeightRequest = 44;
          entryName.Completed += (sender, e) => entryEmail.Focus();
          entryName.ReturnType = ReturnType.Next;
